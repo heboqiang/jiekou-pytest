@@ -5,9 +5,18 @@ import  json
 from utils.public import *
 from utils.operationJson import  OperationJson
 from utils.operationExcel import  OperationExcel
+import pytest
 
 operationJson=OperationJson()
 operationExcel=OperationExcel()
+
+
+"""**********************分类管理模块******************************"""
+def addCategory(typeId=None):
+    "编辑商品分类 类型id 1 积分商品分类 2 竞拍商品分类 3 寄拍商品分类 4 活动竞拍商品"
+    data = json.loads(operationJson.getRequestsData(1))
+    data["typeId"] = typeId
+    return json.dumps(data)
 
 def set_so_keyword1(phone=None):
     "获取请求参数"

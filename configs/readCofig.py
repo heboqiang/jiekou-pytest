@@ -4,29 +4,33 @@
 import os
 import configparser
 
+
 cur_path = os.path.dirname(os.path.relpath(__file__))
 configpath  = os.path.join(cur_path,"cfg.ini")
 conf = configparser.ConfigParser()
 conf.read(configpath,encoding="utf-8")
+
+'''在这切环境'''
 # #开发环境
-# host = conf.get('mysql_1','host')
-# port = conf.get('mysql_1','port')
-# user = conf.get('mysql_1','user')
-# passwd = conf.get('mysql_1','passwd')
-# db = conf.get('mysql_1','db')
+# host = conf.get('mysql_kaifa','host')
+# port = conf.get('mysql_kaifa','port')
+# user = conf.get('mysql_kaifa','user')
+# passwd = conf.get('mysql_kaifa','passwd')
+# db = conf.get('mysql_kaifa','db')
 
 # 测试环境
-# url = conf.get('mysql_2','url')
-# user = conf.get('mysql_2','user')
-# passwd = conf.get('mysql_2','passwd')
-# db = conf.get('mysql_2','db')
+# url = conf.get('mysql_test','url')
+# user = conf.get('mysql_test','user')
+# passwd = conf.get('mysql_test','passwd')
+# db = conf.get('mysql_test','db')
 
 # # 预发布环境
-url = conf.get('mysql_3','url')
-host = conf.get('mysql_3','host')
-user = conf.get('mysql_3','user')
-passwd = conf.get('mysql_3','passwd')
-db = conf.get('mysql_3','db')
+# url = conf.get('mysql_prt','url')
+# host = conf.get('mysql_prt','host')
+# user = conf.get('mysql_prt','user')
+# passwd = conf.get('mysql_prt','passwd')
+# db = conf.get('mysql_prt','db')
+
 
 
 
